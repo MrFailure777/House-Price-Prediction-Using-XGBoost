@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #01101f;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Intel One Mono', monospace;
+}
+
+
+/* Navbar */
+nav {
+  background-color: #020d18;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-right a {
+  color: white;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #34495e;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #27ae60;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  text-align: center;
+  width: 300px;
+}
+
+.popup h3 {
+  margin-top: 0;
+  font-family: 'Intel One Mono', monospace;
+}
+
+.popup .close {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.popup .close:hover {
+  color: red;
+} 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>House Price Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <div class="nav-left">House Price Predictor</div>
+  <div class="nav-right">
+    <a href="">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="https://mrfailure777.github.io/Jahirul-Portfolio/">Portfolio</a>
+  </div>
+</nav>
+
+
+    <!-- Hero Section -->
+
+<section class="hero">
+  <h1>House Price Predictor</h1>
+  <form action="/predict" method="post">
+    <div class="form-group">
+      <input type="number" name="living_area" placeholder="Living Area" required>
+    </div>
+    <div class="form-group">
+      <input type="number" name="grade" placeholder="Grade of the House" required>
+    </div>
+    <div class="form-group">
+      <input type="number" step="any" name="latitude" placeholder="Latitude" required>
+    </div>
+    <div class="form-group">
+      <input type="number" step="any" name="longitude" placeholder="Longitude" required>
+    </div>
+    <div class="form-group">
+      <input type="number" name="living_area_renov" placeholder="Living Area (Renovated)" required>
+    </div>
+    <div class="form-group">
+      <input type="number" name="area_no_basement" placeholder="Area (no basement)" required>
+    </div>
+    <div class="form-group">
+      <input type="number" name="waterfront" placeholder="Waterfront (1 = Yes, 0 = No)" required>
+    </div>
+    <div class="form-group">
+      <input type="number" name="built_year" placeholder="Built Year" required>
+    </div>
+    <div class="form-group">
+      <input type="number" name="postal_code" placeholder="Postal Code" required>
+    </div>
+    <div class="form-group">
+      <input type="number" name="views" placeholder="Number of Views" required>
+    </div>
+    <button type="submit">Predict Price</button>
+  </form>
+</section>
+
+
+  <!-- Prediction Popup -->
+  <div class="popup" id="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <h3>Predicted Price</h3>
+    <p id="priceResult">₹0.00</p>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
