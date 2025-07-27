@@ -42,7 +42,5 @@ def predict():
 if __name__ == "__main__":
     app.run(debug=True)
 
-# FOR GITHUB
-# if __name__ == "__main__":
-#     app.run()
+
 
